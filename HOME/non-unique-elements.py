@@ -6,11 +6,6 @@ def checkio(data):
     #Your code here
     #It's main function. Don't remove this function
     #It's used for auto-testing and must return a result for check.  
-    result = []
-    for element in data:
-        if data.count(element) > 1:
-            result.append(element)
-    return result
 
 
 #Some hints

@@ -1,5 +1,17 @@
 def safe_pawns(pawns):
-    return 0
+    result = 0
+    ord_a = ord('a')
+    for pawn in pawns:
+        row = int(pawn[1])
+        col = ord(pawn[0]) - ord_a
+        if row == 0:
+            continue
+        if col != 0 and str(chr(col - 1 + ord_a) + str(row - 1)) in pawns:
+            result += 1
+            continue
+        if col != 7 and str(chr(col + 1 + ord_a) + str(row - 1)) in pawns:
+            result += 1
+    return result
 
 if __name__ == '__main__':
     #These "asserts" using only for self-checking and not necessary for auto-testing
